@@ -1,0 +1,42 @@
+.game {
+}
+.board {
+    border: solid #808080;
+    border-width: 1px 0 0 1px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: row;
+    width: 290px;
+}
+.boardByEight {
+    width: 256px;
+}
+.boardByNine {
+    width: 288px;
+}
+.boardByTen {
+    width: 320px;
+}
+.boardByEight * {
+    flex-basis: 12.5%
+}
+.boardByNine {
+    flex-basis: 11.1111%;
+}
+.boardByTen {
+    flex-basis: 10%;
+}
+  
+.gameInfoContainer {
+    min-height: 50px;
+    flex-basis: 100%;
+}
+.gameInfo {
+    font-weight: bold;
+}
+
+.clear {
+    clear: both;
+    content: ""
+}
