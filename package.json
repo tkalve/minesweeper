@@ -1,6 +1,6 @@
 {
   "name": "sanity-plugin-minesweeper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A minesweeper dashboard widget for Sanity Content Studio",
   "main": "lib/index.js",
   "repository": {
