@@ -241,6 +241,15 @@ export default class Board extends React.Component {
         });
     }
 
+    handleRestartClick() {
+        this.setState({
+            boardData: this.initBoardData(this.props.height, this.props.width, this.props.mines),
+            mineCount: this.props.mines,
+            gameWon: false,
+            gameLost: false
+        });
+    }
+
     _handleContextMenu(e, x, y) {
         e.preventDefault();
         let updatedData = this.state.boardData;
@@ -296,6 +305,7 @@ export default class Board extends React.Component {
             this.setState({
                 boardData: this.initBoardData(nextProps.height, nextProps.width, nextProps.mines),
                 gameWon: false,
+                gameLost: false,
                 mineCount: nextProps.mines,
             });
         }
@@ -311,6 +321,8 @@ export default class Board extends React.Component {
         return (
             <div className={styles.game}>
                 <div className={styles.gameInfoContainer}>
+                    <button className={styles.restartButton} onClick={() => this.handleRestartClick() }>Restart</button>
+
                     <span className={styles.gameInfo}>Mines: {this.state.mineCount}</span><br />
                     <span className={styles.gameInfo}>{this.state.gameWon ? "You Win" : this.state.gameLost ? "You lost!" : ""}</span>
                 </div>
@@ -319,6 +331,7 @@ export default class Board extends React.Component {
                     this.renderBoard(this.state.boardData)
                 }
                 </div>
+                
             </div>
         );
     }

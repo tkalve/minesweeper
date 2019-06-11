@@ -1,5 +1,5 @@
-.game {
-}
+@import 'part:@sanity/base/theme/variables-style';
+
 .board {
     border: solid #808080;
     border-width: 1px 0 0 1px;
@@ -39,4 +39,14 @@
 .clear {
     clear: both;
     content: ""
+}
+
+.restartButton {
+    padding: 0.8em;
+    border: none;
+    background: rgb(48, 48, 48);
+    color: white;
+    border-radius: 4px;
+    float: right;
+    cursor: pointer;
 }
